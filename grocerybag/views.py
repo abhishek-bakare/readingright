@@ -82,11 +82,11 @@ def filteritem(request):
     view finction for filtering items according to date
     '''
     if request.method == 'GET':
-
+        #users = request.user.items.all()
         query = request.GET.get('query')
         #using filter function
-        filter = Items.objects.filter(Q(date__icontains=query))
-        return render(request, 'filter.html', {'query': query, 'filter': filter})
+        filter = request.user.items.filter(Q(date__icontains=query))
+        return render(request, 'filter.html', {'query': query, 'filter': filter, })
     else:
         return render(request, 'index.html')
 
