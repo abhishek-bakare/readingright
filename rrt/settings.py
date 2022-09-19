@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '%e*gushpa&!r5v1rm4=p#((c2d^-+u31hs_1^yja226hc!r=w#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*','.vercel.app', '.now.sh',]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
